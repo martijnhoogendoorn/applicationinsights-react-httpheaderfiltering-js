@@ -7,6 +7,9 @@ This project is based on [Microsoft Application Insights JavaScript SDK - React 
 This project has a TypeScript module which gets injected into the Application Insights extension modules and allows for filtering out or replacing specific header values
 when AJAX or Fetch requests are executed.
 
+![Example of AI Search result](./images/aiSearch.png "Example of AI Search result showing headers")
+
+
 ## Configuration
 
 In [App.jsx](https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js/blob/master/src/App.jsx), define the proper instrumentation key for Application Insights.
