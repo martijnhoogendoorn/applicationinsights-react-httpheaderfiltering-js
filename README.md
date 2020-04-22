@@ -10,7 +10,15 @@ when AJAX or Fetch requests are executed.
 ## Configuration
 
 In App.jsx, define the proper instrumentation key for Application Insights.
-In TelemetryService.js, check out the chain for the plugins, as well as the configuration for the extension 
+In TelemetryService.js, check out the chain for the plugins, 
+
+```js
+        filterPlugin = new HttpHeaderFilterPlugin();
+
+        extensions: [reactPlugin, filterPlugin],
+```
+
+as well as the configuration for the extension 
 ```js
                     [filterPlugin.identifier]: {
                         filteredHttpHeaders: {
