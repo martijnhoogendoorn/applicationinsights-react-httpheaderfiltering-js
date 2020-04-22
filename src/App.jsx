@@ -67,7 +67,7 @@ const App = () => {
 
     return (
       <BrowserRouter>
-        <TelemetryProvider instrumentationKey="401d9df3-caba-4ad3-9a76-df52496ba33a" after={() => { appInsights = getAppInsights() }}>
+        <TelemetryProvider instrumentationKey="YOURINSTRUMENTATIONKEY" after={() => { appInsights = getAppInsights() }}>
           <div >
             <Header />
             <Route exact path="/" component={Home} />
