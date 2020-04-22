@@ -9,23 +9,24 @@ when AJAX or Fetch requests are executed.
 
 ## Configuration
 
-In App.jsx, define the proper instrumentation key for Application Insights.
-In TelemetryService.js, check out the chain for the plugins, 
+In [App.jsx](https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js/blob/master/src/App.jsx), define the proper instrumentation key for Application Insights.
+In [TelemetryService.js](https://github.com/martijnhoogendoorn/applicationinsights-react-httpheaderfiltering-js/blob/master/src/TelemetryService.js), check out the chain for the plugins, 
 
 ```js
-        filterPlugin = new HttpHeaderFilterPlugin();
+    filterPlugin = new HttpHeaderFilterPlugin();
 
-        extensions: [reactPlugin, filterPlugin],
+    extensions: [reactPlugin, filterPlugin],
 ```
 
-as well as the configuration for the extension 
+as well as the configuration for the extension
+
 ```js
-                    [filterPlugin.identifier]: {
-                        filteredHttpHeaders: {
-                            Authorization: '[value removed]',
-                            SomeOtherThing: null,
-                        }
-                    },
+    [filterPlugin.identifier]: {
+        filteredHttpHeaders: {
+            Authorization: '[value removed]',
+            SomeOtherThing: null,
+        }
+    },
 ```
 
 This configuration replaces the 'Authorization' header configured for XMLHttpRequest and Fetch operations, and removes the header added to Fetch (the two last buttons of the demo).
