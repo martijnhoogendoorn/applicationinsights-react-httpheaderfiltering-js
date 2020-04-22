@@ -1,6 +1,6 @@
 # Microsoft Application Insights Filtering Plugin example in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is based on [Microsoft Application Insights JavaScript SDK - React Plugin](https://github.com/microsoft/ApplicationInsights-JS/tree/master/extensions/applicationinsights-react-js)
 
 ## What this demonstrates
 
